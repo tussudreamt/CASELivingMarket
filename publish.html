@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publish a Product</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Publish a Product</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Browse Products</a>
+        <a href="publish.html">Publish a Product</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="section-box">
+        <h2>List Your Startup's Product</h2>
+        <p>Fill out the details below to add your product to the appropriate category.</p>
+        
+        <form action="#" method="POST">
+            <label for="product-name">Product Name:</label>
+            <input type="text" id="product-name" required placeholder="e.g., Organic Ashwagandha Tea">
+
+            <label for="category">Category:</label>
+            <select id="category">
+                <option value="functional">Functional Foods & Traditional Staples</option>
+                <option value="plant-based">Plant-Based Meat & Dairy Alternatives</option>
+                <option value="nutraceuticals">Nutraceuticals & Herbal Supplements</option>
+                <option value="beauty">Clean Personal Care & Beauty</option>
+            </select>
+
+            <label for="description">Brief Description:</label>
+            <textarea id="description" rows="3" required placeholder="Describe what makes your product unique..."></textarea>
+
+            <label for="ingredients">Ingredients / Product Use:</label>
+            <textarea id="ingredients" rows="2" required placeholder="List the core natural ingredients..."></textarea>
+
+            <label for="contact">Founder/Owner Contact Number:</label>
+            <input type="tel" id="contact" required placeholder="+91 ...">
+
+            <label for="product-image">Upload Product Image:</label>
+            <input type="file" id="product-image" accept=".jpg, .jpeg, .png, .webp" required>
+            <p class="warning-text"><strong>Important:</strong> Image uploads sometimes fail if the wrong format is used. Please ensure your image has exactly a <code>.jpg</code>, <code>.jpeg</code>, <code>.png</code>, or <code>.webp</code> extension.</p>
+
+            <button type="submit">Publish Product</button>
+        </form>
+    </div>
+</div>
+
+<footer>
+    <p>Contact us: +91 98765 43210</p>
+    <p><a href="#" style="color: #c8e6c9;">Terms and Service</a> | &copy; 2026 Natural Startup Platform</p>
+</footer>
+<script src="publish.js"></script>
+</body>
+</html>

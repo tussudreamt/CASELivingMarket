@@ -1,0 +1,178 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9fbf9;
+    color: #333;
+}
+header {
+    background-color: #2e7d32;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+.section-box {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.product-card {
+    border-left: 4px solid #4caf50;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f1f8e9;
+}
+.reference-img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+footer {
+    background-color: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+.warning-text {
+    color: #d32f2f;
+    font-size: 0.9rem;
+}
+/* --- NEW SCROLLING CAROUSEL EFFECTS --- */
+
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px; /* Space between the cards */
+    padding: 15px 5px 25px 5px;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; /* Makes it snap cleanly to the next card */
+}
+
+/* Customizing the scrollbar to look green and modern */
+.scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+.scroll-container::-webkit-scrollbar-track {
+    background: #e8f5e9; 
+    border-radius: 4px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #2e7d32; 
+    border-radius: 4px;
+}
+
+/* Updating the product cards to fit the slider */
+.scroll-container .product-card {
+    min-width: 320px; /* Forces all cards to be the same width */
+    max-width: 320px;
+    flex: 0 0 auto; /* Prevents the browser from squishing them */
+    margin-bottom: 0; 
+    scroll-snap-align: start; /* Aligns card neatly when scrolling stops */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; /* Prepares the hover effect */
+    border-radius: 8px;
+}
+
+/* Cool hover effect: the card lifts up slightly when you point at it */
+.scroll-container .product-card:hover {
+    transform: translateY(-8px);
+}
+/* --- TEXT CLAMPING & READ MORE BUTTON --- */
+
+.text-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Forces text to stop after 2 lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #555;
+}
+
+.read-more-btn {
+    background: none;
+    border: none;
+    color: #2e7d32;
+    cursor: pointer;
+    padding: 0;
+    font-weight: bold;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    text-decoration: underline;
+}
+
+.read-more-btn:hover {
+    color: #1b5e20;
+}
+/* --- BUTTON HOVER EFFECTS --- */
+.delete-btn {
+    background-color: #d32f2f;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Makes the animation smooth */
+    margin-top: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #b71c1c; /* Darkens the red */
+    transform: scale(1.03); /* Makes the button grow slightly */
+    box-shadow: 0 4px 8px rgba(211, 47, 47, 0.3); /* Adds a glowing shadow */
+}
+
+.delete-btn:active {
+    transform: scale(0.98); /* Shrinks slightly when clicked */
+}
+
+/* --- INTERACTIVE STAR RATING --- */
+.star {
+    font-size: 1.2rem;
+    color: #ccc; /* Default gray star */
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.star.active {
+    color: #ff9800; /* Bright orange for rated stars */
+}
+
+.star:hover {
+    transform: scale(1.3); /* Stars pop up when you hover over them */
+}
